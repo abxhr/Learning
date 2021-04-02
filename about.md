@@ -1,8 +1,8 @@
 ---
-title: about me.
+title: About
 permalink: /about/
 layout: page
-excerpt: Hey guys! It's Abshar here
+excerpt: Hello! I'm Abshar, a Sophomore Computer Science Student from Birla Institute of Technology and Science Pilani, Dubai Campus.
 comments: false
 ---
 
@@ -17,7 +17,7 @@ If you have a question about him or else, just send a letter to him.
 
 You can [report](http://github.com/abxhr/Learning/issues/new) if there is an broken link(s) or something else.
 
-**may u needs ✨**
+** Reach me @ **
 
-- {{ site.author.email }}
-- github.com/{{ site.author.github }}
+- [{{ site.author.email }}](mailto:{{ site.author.email }})
+- [github.com/{{ site.author.github }}](https://github.com/{{ site.author.github }})
