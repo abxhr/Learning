@@ -2,13 +2,21 @@
   url: /
   external: false
 
-- title: archive
-  url: /archive/
-  external: false
-
 - title: about
   url: /about/
-  external: false # set true if you using external link, see below
+  external: false
+
+- title: posts
+  url: /posts/
+  external: false # set true if you using external link, see bellow
+
+- title: tags
+  url: /tags/
+  external: false # set true if you using external link, see bellow
+
+- title: Github
+  url: https://github.com/abxhr/Learning/
+  external: true # set true if you using external link, see bellow
 
 # Example:
 # - title: github
