@@ -25,7 +25,7 @@ author:
 url: "https://abxhr-learning.vercel.app/" #
 baseurl:
 permalink: /:title/
-google_analytics: G-8KPZ8WNR9E # leave it blank if not wish
+google_analytics: UA-26769023-6 # leave it blank if not wish
 fb_appid:
 
 # Collection setting
