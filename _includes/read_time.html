@@ -1,0 +1,26 @@
+<span class="reading-time" title="Estimated read time">
+    {% assign words = include.content | strip_html | remove: '<pre>' | number_of_words %}
+    <!-- {{ words | divided_by: 180 | plus: 1 }} min read. -->
+    {% if words >= 0 and words <= 89 %}
+        30 seconds
+    {% elsif words >= 90 and words <= 269 %}
+        1 minute
+    {% elsif words >= 230 and words <= 449 %}
+        2 minutes
+    {% elsif words >= 450 and words <= 629 %}
+        3 minutes
+    {% elsif words >= 630 and words <= 809 %}
+        4 minutes
+    {% elsif words >= 810 and words <= 990 %}
+        5 minutes
+    {% else %}
+      {% assign new_mins = words | divided_by:250 %}
+      {% if new_mins >= 0 and new_mins <= 59 %}
+        {{ new_mins }} minutes
+      {% elsif new_mins >= 60 and new_words <= 119 %}
+        {{ new_mins | divided_by: 60 }} hour
+      {% else %}
+        {{ new_mins | divided_by: 60 }} hours
+      {% endif %}
+    {% endif %}
+</span>

@@ -124,11 +124,11 @@ body[data-theme="dark"] {
   .navbar {
     border-color: $dark-light;
     .menu {
-      a#mode {
-        .mode-sunny {
+      a#mood {
+        .mood-sunny {
           display: block;
         }
-        .mode-moon {
+        .mood-moon {
           display: none;
         }
       }
@@ -160,6 +160,9 @@ body[data-theme="dark"] {
     }
 
     .post-item-date {
+      color: $dark-white;
+    }
+    .post-item-time {
       color: $dark-white;
     }
     .post-item-title {
@@ -220,7 +223,7 @@ body[data-theme="dark"] {
   }
 
   // 404 Page
-  .not-found {
+  .wrapper.not-found {
     .title {
       color: $dark-white;
       text-shadow: 1px 0px 0px $dark-text-link-blue;
@@ -238,6 +241,21 @@ body[data-theme="dark"] {
 
   .search-article {
     input[type="search"] {
+      color: $dark-text-base-color;
+      &::-webkit-input-placeholder {
+        color: rgba(128,128,128,0.8);
+      }
+    }
+  }
+
+  .contact-form {
+    input, select {
+      color: $dark-text-base-color;
+      &::-webkit-input-placeholder {
+        color: rgba(128,128,128,0.8);
+      }
+    }
+    textarea {
       color: $dark-text-base-color;
       &::-webkit-input-placeholder {
         color: rgba(128,128,128,0.8);

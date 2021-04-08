@@ -1,9 +1,12 @@
 <div class="author">
-  <img
-    class="author-avatar"
-    src="{{ site.author.avatar }}"
-    alt="{{ site.author.username }}"
-  />
+  <div class="author-avatar-wrapper">
+    <img
+      class="author-avatar"
+      src="{{ site.author.avatar }}"
+      alt="{{ site.author.username }}"
+    />
+  </div>
   <h2 class="author-name">{{ site.author.name }}</h2>
-  <p class="author-bio">{{ site.author.bio }}</p>
+  <h4 class="author-name">{% include social-media-links.html %}</h4>
+  <h4 class="author-bio">{{ site.author.bio }} </h4>
 </div>

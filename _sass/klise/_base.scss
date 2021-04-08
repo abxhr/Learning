@@ -206,10 +206,6 @@ h6 {
   & + ol {
     margin-top: 10px;
   }
-
-  @include media-query($on-mobile) {
-    scroll-margin-top: 65px;
-  }
 }
 
 // Headings with link
@@ -288,11 +284,6 @@ blockquote {
     max-width: calc(#{$narrow-size} - (#{$spacing-full}));
     padding-right: $spacing-full - 10;
     padding-left: $spacing-full - 10;
-
-    &.blurry {
-      animation: 0.2s ease-in forwards blur;
-      -webkit-animation: 0.2s ease-in forwards blur;
-    }
   }
 }
 
@@ -333,8 +324,12 @@ table {
     border-bottom: 1px solid $light;
   }
 
-  th,
-  td,
+  th{
+    text-align: center! important;
+  }
+  td{
+    text-align: center! important;
+  }
   tr {
     border: 1px solid $light;
     padding: 2px 7px;

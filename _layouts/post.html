@@ -5,6 +5,14 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
+
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<!-- <head>
+  <script src="https://kit.fontawesome.com/be146ff004.js" crossorigin="anonymous"></script>
+</head> -->
+
 {% include header.html %}
 
 <body data-theme="{{ site.mode }}" class="notransition">
@@ -46,18 +54,23 @@ layout: compress
           </div>
           {% endif %}
           <h1 class="header-title" itemprop="headline">{{ page.title | escape }}</h1>
+          <h2 class="anchor-head" itemprop="mainEntityOfPage">{{ page.description | markdownify }}</h1>
           {% if page.date %}
           <div class="post-meta">
+            <!-- <span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;{{ page.content | reading_time }} read&nbsp;&nbsp;</span> -->
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{% include read_time.html content=page.content %} read&nbsp;&nbsp;</span>
+
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-              {{ page.date | date: "%b %d, %Y" }}
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;{{ page.date | date: "%b %d, %Y" }}&nbsp;&nbsp;
             </time>
-            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-              <span itemprop="name">{{ site.author.name }}</span>
-            </span>
+            <!-- <span itemprop="author" itemscope itemtype="https://schema.org/Person"> -->
+              <span itemprop="name"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;
+                {{ site.author.name }}</span>
+            <!-- </span> -->
             <time hidden datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
-              {{ page.date | date: "%b %d, %Y" }}
+              <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;{{ page.date | date: "%b %d, %Y" }}
             </time>
-            <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
+            <span hidden itemprop="publisher" itemtype="Person"><i class="fa fa-user" aria-hidden="true"></i>{{ site.author.name }}</span>
             <span hidden itemprop="image">{{ page.image }}</span>
             <span hidden itemprop="mainEntityOfPage">{{ page.excerpt }}</span>
           </div>
@@ -65,30 +78,40 @@ layout: compress
         </header>
 
         <div class="page-content" itemprop="articleBody">
-          {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
+          {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=3 %}
           {% if page.tweet %}
-          <p>Comments this article on 
-            <a href="https://twitter.com/{{site.twitter}}/status/{{page.tweet}}">Twitter</a>.
+          <p>Comments this article on
+            <a href="https://twitter.com/{{site.username}}/status/{{page.tweet}}">Twitter</a>.
           </p>
           {% endif %}
         </div>
       </article>
-    
+
+      <div class="share-posts">
+        <h1>{% include share-posts.html %}</h1>
+      </div>
+      <br>
+
+      {% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample:3 %}
+      {% include related-post.html %}
+
+      <br>
+
       {% if page.comments %}
         {% include comments.html %}
       {% endif %}
 
     </main>
-
     {% if page.modified %}
       <small class="post-updated-at">updated_at {{page.modified | date: "%d-%m-%Y"}}</small>
     {% endif %}
     {% if page.next or page.previous %}
       {% include navigation.html %}
     {% endif %}
-
-    {% include footer.html %}
   </div>
+
+  {% include footer.html %}
+
 </body>
 
 </html>
