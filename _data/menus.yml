@@ -14,7 +14,11 @@
   url: /tags/
   external: false # set true if you using external link, see bellow
 
-- title: Github
+- title: subscribe
+  url: /subscribe/
+  external: false # set true if you using external link, see bellow
+
+- title: github
   url: https://github.com/abxhr/Learning/
   external: true # set true if you using external link, see bellow
 
