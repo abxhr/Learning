@@ -18,5 +18,3 @@ I love
 You can [report](http://github.com/abxhr/Learning/issues/new) if there is an broken link(s) or something else.
 
 {% include contact_form.html %}
-
-{% include subscribe_form.html %}
