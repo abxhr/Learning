@@ -15,7 +15,7 @@ comments: false
 
 <ul id="search-results"></ul>
 
-{%- for post in site.posts -%}
+{%- for post in site.categories.blog -%}
   {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
   {%- unless current_year == previous_year -%}
     <h2>{{ current_year }}</h2>
