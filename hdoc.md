@@ -7,8 +7,8 @@ comments: false
 ---
 
 <p align="center">
-Join me on my journey to [#100DaysOfCode](https://www.100daysofcode.com/)
-
+Join me on my journey to <a href="https://www.100daysofcode.com/"><b>100 Days Of Code</b></a>!
+<br>
 I'll be documenting each day of the challenge through my blogs here.
 </p>
 
