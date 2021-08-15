@@ -12,7 +12,7 @@ Join me on my journey to <a href="https://www.100daysofcode.com/"><b>100 Days Of
 I'll be documenting each day of the challenge through my blogs here.
 </p>
 
-{%- for post in site.hdoc -%}
+{%- for post in site.posts -%}
   <article class="post-item">
     <h3 class="post-item-title">
       <a href="{{ post.url }}">{{ post.title | escape }}</a>
