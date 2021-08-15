@@ -13,11 +13,6 @@ I'll be documenting each day of the challenge through my blogs here.
 </p>
 
 {%- for post in site.hdoc -%}
-  {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
-  {%- unless current_year == previous_year -%}
-    <h2>{{ current_year }}</h2>
-    {%- assign previous_year = current_year -%}
-  {%- endunless -%}
   <article class="post-item">
     <h3 class="post-item-title">
       <a href="{{ post.url }}">{{ post.title | escape }}</a>
