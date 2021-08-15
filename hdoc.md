@@ -6,6 +6,12 @@ excerpt: 100DaysOfCode.
 comments: false
 ---
 
+<p align="center">
+Join me on my journey to [#100DaysOfCode](https://www.100daysofcode.com/)
+
+I'll be documenting each day of the challenge through my blogs here.
+</p>
+
 {%- for post in site.hdoc -%}
   {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
   {%- unless current_year == previous_year -%}
