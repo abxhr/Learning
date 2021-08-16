@@ -12,6 +12,8 @@ Join me on my journey to <a href="https://www.100daysofcode.com/"><b>100 Days Of
 I'll be documenting each day of the challenge through my blogs here.
 </p>
 
+{% include countdown_hdoc.html %}
+
 {%- for post in site.categories.hdoc -%}
   <article class="post-item">
     <h3 class="post-item-title">
