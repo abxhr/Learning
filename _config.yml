@@ -23,7 +23,7 @@ author:
 # URL settings
 url: "https://abxhr-learning.vercel.app/" #
 baseurl:
-permalink: /:title/
+permalink: /:categories/:title/
 google_analytics: G-J2788YZ2YK # leave it blank if not wish
 fb_appid:
 
